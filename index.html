@@ -4,202 +4,131 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Causeway SmartCommute – Beat the Jam with AI</title>
-  <!-- Tailwind CSS CDN (just‑in‑time build) -->
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     body { font-family: 'Inter', sans-serif; }
   </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
-  <!-- ========= NAVBAR ========= -->
-  <header class="bg-white shadow-sm fixed w-full z-50">
-    <div class="container mx-auto flex items-center justify-between px-6 py-4">
-      <a href="#" class="text-2xl font-bold text-indigo-600">SmartCommute</a>
-      <nav>
-        <button id="navToggle" class="lg:hidden text-gray-700 focus:outline-none">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
-        </button>
-        <ul id="navMenu" class="hidden lg:flex gap-8 text-sm font-medium">
-          <li><a href="#features" class="hover:text-indigo-600">Features</a></li>
-          <li><a href="#pricing" class="hover:text-indigo-600">Pricing</a></li>
-          <li><a href="#faq" class="hover:text-indigo-600">FAQ</a></li>
-          <li><a href="#download" class="bg-indigo-600 text-white px-4 py-2 rounded-lg shadow hover:bg-indigo-700 transition">Download</a></li>
-        </ul>
-      </nav>
+  <!-- Header -->
+  <header class="bg-gradient-to-r from-indigo-600 to-sky-500 text-white">
+    <div class="max-w-7xl mx-auto px-6 py-16 flex flex-col md:flex-row items-center justify-between gap-10">
+      <div>
+        <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4">Causeway&nbsp;SmartCommute</h1>
+        <p class="text-lg md:text-xl mb-8 max-w-xl">Crowd‑sourced, AI‑powered traffic insights for Singapore–Malaysia Causeway &amp; Tuas checkpoints.</p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="#download" class="bg-white/20 hover:bg-white/30 backdrop-blur-sm border border-white/40 rounded-xl px-6 py-3 text-base font-medium flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 384 512"><path d="M318.7 268c-.2-38.3 16.7-67.4 52.7-89 0 0-26.7-38-73-38-41.7 0-61.7 28.2-92 28.2-30.3 0-51.3-28.2-92-28.2-56.3 0-108.3 45.8-108.3 131.8 0 24.8 4.5 53 20.3 80.7C62.7 420 88.3 451.7 119 451.7c28.7 0 39.6-18.5 82-18.5 42.4 0 53.3 18.5 82 18.5 30.7 0 55.4-31.7 72.6-60.3 11.4-18.7 15.8-28.6 24.7-50.2-64.4-24.6-61.8-98.7-61.6-120.2z"/></svg>
+            Coming Soon on App Store</a>
+          <a href="#download" class="bg-white text-gray-900 hover:bg-gray-200 rounded-xl px-6 py-3 text-base font-medium flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="30 336.7 120.9 129.2"><path d="M153.7 386.3L32.4 336.7v129.2l121.3-50.1-97.6-25.3 97.6-25.4z"/></svg>
+            Get it on Google Play</a>
+        </div>
+      </div>
+      <img src="your-screenshot.png" alt="App preview" class="w-full md:w-1/2 rounded-3xl shadow-xl" loading="lazy" />
     </div>
   </header>
 
-  <!-- ========= HERO ========= -->
-  <section class="pt-24 pb-16 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
-    <div class="container mx-auto px-6 flex flex-col lg:flex-row items-center gap-10">
-      <div class="max-w-xl">
-        <h1 class="text-4xl lg:text-5xl font-extrabold leading-tight mb-4">Beat the Causeway Jam <br class="hidden lg:block"/> with Real‑Time AI Insights</h1>
-        <p class="text-lg lg:text-xl mb-8">SmartCommute blends crowdsourced reports, BLE/GPS data, and AI prediction to give you the fastest route across Woodlands & Tuas.</p>
-        <div id="download" class="flex gap-4">
-          <a href="#" class="bg-black rounded-lg px-4 py-3 flex items-center gap-3 hover:opacity-90">
-            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c1.306 0 2.417.835 2.83 2h-5.66C9.583 2.835 10.694 2 12 2z"/><path d="M15 2v6c0 2.76-2.24 5-5 5S5 10.76 5 8V2h10z"/><path d="M5 10h10v12H5z"/></svg>
-            <span class="text-left">
-              <span class="block text-xs">Download on the</span>
-              <span class="block text-sm font-semibold">App Store</span>
-            </span>
-          </a>
-          <a href="#" class="bg-green-600 rounded-lg px-4 py-3 flex items-center gap-3 hover:opacity-90">
-            <svg class="w-6 h-6" viewBox="30 336.7 120.9 129.2" fill="currentColor"><path d="M144.6 391L39.3 336.7c-4.5-2.3-8.6-.4-10.2 4.5L69.4 406l75.2-15z"/><path d="M29 463.4L134.3 509c4.5 2.3 8.6.4 10.2-4.5l-40.3-64.9L29 463.4z"/><path d="M29 372.3v91.1l75.2-45.5-75.2-45.6z"/><path d="M134.3 509c3.6 1.8 6.6.8 8.4-2.5l18-29.7-26.4-42.4-75.2 45.5 75.2 45.5z"/></svg>
-            <span class="text-left">
-              <span class="block text-xs">Get it on</span>
-              <span class="block text-sm font-semibold">Google Play</span>
-            </span>
-          </a>
+  <!-- Features -->
+  <section class="py-20" id="features">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-12">Why SmartCommute?</h2>
+      <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+        <div class="bg-white rounded-2xl shadow p-6">
+          <h3 class="font-semibold text-xl mb-2">Live&nbsp;Heatmaps</h3>
+          <p class="text-sm leading-relaxed">Visual congestion levels updated every few minutes—no more guessing game.</p>
         </div>
-      </div>
-      <div class="flex-1">
-        <img src="https://source.unsplash.com/500x900/?traffic" alt="App mockup" class="w-full rounded-2xl shadow-xl" />
-      </div>
-    </div>
-  </section>
-
-  <!-- ========= FEATURES ========= -->
-  <section id="features" class="py-20">
-    <div class="container mx-auto px-6 text-center">
-      <h2 class="text-3xl font-bold mb-12">Key Features</h2>
-      <div class="grid gap-12 lg:grid-cols-3">
-        <div class="p-6 bg-white rounded-2xl shadow-sm hover:shadow-lg transition">
-          <div class="flex items-center justify-center mb-4 w-14 h-14 rounded-full bg-indigo-50 mx-auto">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c2.28 0 4-1.72 4-4s-1.72-4-4-4-4 1.72-4 4 1.72 4 4 4zm0 2c-3.32 0-6 2.68-6 6v1h12v-1c0-3.32-2.68-6-6-6z"/></svg>
-          </div>
-          <h3 class="font-semibold text-lg mb-2">Live Congestion Heatmap</h3>
-          <p class="text-sm text-gray-600">Visualize real‑time crowd density along custom zones using BLE & GPS data streams.</p>
+        <div class="bg-white rounded-2xl shadow p-6">
+          <h3 class="font-semibold text-xl mb-2">Community&nbsp;Reports</h3>
+          <p class="text-sm leading-relaxed">Users share real‑time observations with quick “tap‑to‑vote” cards.</p>
         </div>
-        <div class="p-6 bg-white rounded-2xl shadow-sm hover:shadow-lg transition">
-          <div class="flex items-center justify-center mb-4 w-14 h-14 rounded-full bg-indigo-50 mx-auto">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1 0V9a5 5 0 015-5h3m4 0h.01"/></svg>
-          </div>
-          <h3 class="font-semibold text-lg mb-2">Community Reports</h3>
-          <p class="text-sm text-gray-600">Crowd‑sourced snapshots, voting & AI‑generated summaries keep everyone informed.</p>
+        <div class="bg-white rounded-2xl shadow p-6">
+          <h3 class="font-semibold text-xl mb-2">AI&nbsp;Forecasts</h3>
+          <p class="text-sm leading-relaxed">Short‑range predictions trained on historical cameras &amp; traffic data—helping you plan ahead.</p>
         </div>
-        <div class="p-6 bg-white rounded-2xl shadow-sm hover:shadow-lg transition">
-          <div class="flex items-center justify-center mb-4 w-14 h-14 rounded-full bg-indigo-50 mx-auto">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-3-3v6m9 5V4a1 1 0 00-1-1h-6.382a1 1 0 00-.894.553L7.382 6H4a1 1 0 00-1 1v11a1 1 0 001 1h16a1 1 0 001-1z"/></svg>
-          </div>
-          <h3 class="font-semibold text-lg mb-2">Predictive ETA & Alerts</h3>
-          <p class="text-sm text-gray-600">Vertex AI models forecast travel time peaks—get push alerts before jams build.</p>
+        <div class="bg-white rounded-2xl shadow p-6">
+          <h3 class="font-semibold text-xl mb-2">Privacy‑first</h3>
+          <p class="text-sm leading-relaxed">We <strong>do not collect personal location data</strong>. Your on‑device GPS is used only to weight anonymous votes.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========= SCREENSHOTS ========= -->
-  <section class="bg-gray-100 py-20">
-    <div class="container mx-auto px-6 text-center">
-      <h2 class="text-3xl font-bold mb-12">Sneak Peek</h2>
-      <div class="grid gap-6 md:grid-cols-3">
-        <img class="rounded-2xl shadow-lg" src="https://source.unsplash.com/400x800/?mobile,app" alt="Screenshot 1" />
-        <img class="rounded-2xl shadow-lg" src="https://source.unsplash.com/400x800/?maps" alt="Screenshot 2" />
-        <img class="rounded-2xl shadow-lg" src="https://source.unsplash.com/400x800/?dashboard" alt="Screenshot 3" />
+  <!-- Support Us -->
+  <section class="py-20 bg-indigo-50" id="support">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-4">SmartCommute is Free—But AI Isn’t 😉</h2>
+      <p class="mb-8 text-lg">Running camera analysis in the cloud costs real money. Ads keep the servers humming, but you can help us go further.</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-6">
+        <a href="https://ko-fi.com/yourlink" class="bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-3 px-8 rounded-xl shadow">Buy&nbsp;Us&nbsp;a&nbsp;Coffee ☕</a>
+        <a href="#pricing" class="bg-white hover:bg-gray-100 border border-gray-300 text-gray-900 font-medium py-3 px-8 rounded-xl shadow">See Future&nbsp;Plans</a>
       </div>
     </div>
   </section>
 
-  <!-- ========= PRICING ========= -->
-  <section id="pricing" class="py-20">
-    <div class="container mx-auto px-6 text-center">
-      <h2 class="text-3xl font-bold mb-12">Pricing</h2>
-      <div class="flex flex-col lg:flex-row gap-8 justify-center">
+  <!-- Pricing -->
+  <section class="py-20" id="pricing">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-4">Current &amp; Upcoming Plans</h2>
+      <p class="text-center mb-12">Today, everyone enjoys the full experience <strong>free with ads</strong>. We’re exploring an optional <em>Premium</em> tier—ad‑free with extra analytics—based on your feedback.</p>
+
+      <div class="grid md:grid-cols-2 gap-10">
         <!-- Free Plan -->
-        <div class="bg-white rounded-2xl shadow p-8 w-full max-w-sm border border-gray-200">
-          <h3 class="text-xl font-semibold mb-4">Free</h3>
-          <p class="text-gray-600 mb-6">Perfect for casual commuters.</p>
-          <ul class="space-y-3 mb-6 text-sm text-left">
-            <li class="flex items-center gap-2"><span class="text-green-600">✔</span> Live traffic heatmap</li>
-            <li class="flex items-center gap-2"><span class="text-green-600">✔</span> Community voting</li>
-            <li class="flex items-center gap-2"><span class="text-red-500">✖</span> Ad‑free experience</li>
-            <li class="flex items-center gap-2"><span class="text-red-500">✖</span> Historical analytics</li>
+        <div class="bg-white rounded-3xl shadow p-8 flex flex-col">
+          <h3 class="text-xl font-semibold mb-2">Free&nbsp;Plan</h3>
+          <p class="text-sm mb-6">Supported by lightweight banner &amp; interstitial ads.</p>
+          <ul class="space-y-2 flex-1">
+            <li>✔ Live heatmaps &amp; AI forecasts</li>
+            <li>✔ Community voting</li>
+            <li>✔ Unlimited history browse</li>
           </ul>
-          <span class="text-4xl font-bold">$0</span>
+          <div class="mt-8 text-2xl font-bold">$0<span class="text-base font-normal">/forever</span></div>
         </div>
         <!-- Premium Plan -->
-        <div class="bg-indigo-600 text-white rounded-2xl shadow p-8 w-full max-w-sm transform lg:-translate-y-6">
-          <h3 class="text-xl font-semibold mb-4">Premium</h3>
-          <p class="mb-6">For daily crossers & power users.</p>
-          <ul class="space-y-3 mb-6 text-sm text-left">
-            <li class="flex items-center gap-2"><span class="text-white">✔</span> Everything in Free</li>
-            <li class="flex items-center gap-2"><span class="text-white">✔</span> Ad‑free experience</li>
-            <li class="flex items-center gap-2"><span class="text-white">✔</span> AI travel suggestions</li>
-            <li class="flex items-center gap-2"><span class="text-white">✔</span> 12‑month history insights</li>
+        <div class="bg-indigo-600 text-white rounded-3xl shadow-lg p-8 flex flex-col">
+          <h3 class="text-xl font-semibold mb-2">Premium&nbsp;— Coming Soon</h3>
+          <p class="text-sm mb-6">Early concept—pricing TBD. Register interest!</p>
+          <ul class="space-y-2 flex-1">
+            <li>⚡️ Ad‑free experience</li>
+            <li>⚡️ Advanced 4‑hr forecasts</li>
+            <li>⚡️ Customizable alert push‑notifications</li>
           </ul>
-          <span class="text-4xl font-bold">$4.99</span><span class="text-sm">/mo</span>
-          <div class="mt-6">
-            <a href="#" class="bg-white text-indigo-600 font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition">Join Waitlist</a>
-          </div>
+          <button class="mt-8 bg-white/20 hover:bg-white/30 backdrop-blur py-3 rounded-xl font-medium" disabled>Notify&nbsp;Me</button>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========= FAQ ========= -->
-  <section id="faq" class="py-20 bg-gray-100">
-    <div class="container mx-auto px-6">
-      <h2 class="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
-      <div class="max-w-2xl mx-auto divide-y divide-gray-200">
-        <div class="py-4">
-          <button class="faq-toggle flex justify-between items-center w-full text-left">
-            <span class="font-medium">How accurate are the traffic predictions?</span>
-            <svg class="w-5 h-5 text-gray-500 transition-transform" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.939l3.71-3.71a.75.75 0 111.06 1.061l-4.24 4.24a.75.75 0 01-1.06 0l-4.24-4.24a.75.75 0 01.02-1.06z" clip-rule="evenodd" /></svg>
-          </button>
-          <div class="faq-content mt-2 hidden text-sm text-gray-600">We combine official data, camera analysis & crowdsourced reports to achieve >85% ETA accuracy during peak periods.</div>
-        </div>
-        <div class="py-4">
-          <button class="faq-toggle flex justify-between items-center w-full text-left">
-            <span class="font-medium">Why do you need my location?</span>
-            <svg class="w-5 h-5 text-gray-500 transition-transform" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.939l3.71-3.71a.75.75 0 111.06 1.061l-4.24 4.24a.75.75 0 01-1.06 0l-4.24-4.24a.75.75 0 01.02-1.06z" clip-rule="evenodd" /></svg>
-          </button>
-          <div class="faq-content mt-2 hidden text-sm text-gray-600">Location data helps weight votes & calibrate heatmaps. We never store personal identifiers—see our privacy policy.</div>
-        </div>
-        <div class="py-4">
-          <button class="faq-toggle flex justify-between items-center w-full text-left">
-            <span class="font-medium">When will Android be available?</span>
-            <svg class="w-5 h-5 text-gray-500 transition-transform" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.939l3.71-3.71a.75.75 0 111.06 1.061l-4.24 4.24a.75.75 0 01-1.06 0l-4.24-4.24a.75.75 0 01.02-1.06z" clip-rule="evenodd" /></svg>
-          </button>
-          <div class="faq-content mt-2 hidden text-sm text-gray-600">Beta testing opens Q4 2025—join our newsletter for early access.</div>
-        </div>
+  <!-- FAQ -->
+  <section class="py-16 bg-gray-100" id="faq">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        <details class="bg-white rounded-xl shadow p-5" open>
+          <summary class="font-medium cursor-pointer">How accurate are the AI forecasts?</summary>
+          <p class="mt-3 text-sm leading-relaxed">Forecasts improve over time as we collect more data. We avoid publishing a fixed “accuracy %” because checkpoint traffic is inherently unpredictable. Use our insights as guidance—not gospel.</p>
+        </details>
+        <details class="bg-white rounded-xl shadow p-5">
+          <summary class="font-medium cursor-pointer">Do you track my location?</summary>
+          <p class="mt-3 text-sm leading-relaxed">No personal location data is stored. When you vote, we use your device’s GPS transiently to weight votes and then discard it. Nothing is tied back to your identity.</p>
+        </details>
+        <details class="bg-white rounded-xl shadow p-5">
+          <summary class="font-medium cursor-pointer">How can I support development?</summary>
+          <p class="mt-3 text-sm leading-relaxed">Watch an occasional video ad, share the app with friends, or buy us a coffee via the link above. Your support funds server costs and new features.</p>
+        </details>
       </div>
     </div>
   </section>
 
-  <!-- ========= FOOTER ========= -->
-  <footer class="bg-white py-8 text-center text-sm text-gray-500">
-    <div class="container mx-auto px-6">
-      © <span id="year"></span> SmartCommute. Built with love in SG & MY. <a href="#" class="underline hover:text-indigo-600">Privacy</a>
-    </div>
+  <!-- Footer -->
+  <footer class="py-10 text-center text-sm text-gray-500">
+    <p>© <span id="year"></span> Causeway SmartCommute by Tay&nbsp;Tong&nbsp;Tau. All rights reserved.</p>
   </footer>
 
-  <!-- ========= SCRIPTS ========= -->
   <script>
-    // Dynamic year
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Mobile nav
-    const navToggle = document.getElementById('navToggle');
-    const navMenu = document.getElementById('navMenu');
-    navToggle.addEventListener('click', () => {
-      navMenu.classList.toggle('hidden');
-    });
-
-    // FAQ accordion
-    document.querySelectorAll('.faq-toggle').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const content = btn.nextElementSibling;
-        const icon = btn.querySelector('svg');
-        content.classList.toggle('hidden');
-        icon.classList.toggle('rotate-180');
-      });
-    });
   </script>
-    <p><a href="privacy.html">Read our Privacy Policy</a></p>
 </body>
 </html>
-
-
-
