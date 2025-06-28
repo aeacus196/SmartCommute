@@ -9,6 +9,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     body { font-family: 'Inter', sans-serif; }
+    .fade-enter { opacity: 0; transform: translateY(40px); }
+    .fade-enter-active { opacity: 1; transform: translateY(0); transition: opacity 0.4s, transform 0.4s; }
   </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -20,11 +22,13 @@
         <p class="text-lg md:text-xl mb-8 max-w-xl">Crowd‑sourced, AI‑powered traffic insights for Singapore–Malaysia Causeway &amp; Tuas checkpoints.</p>
         <div class="flex flex-col sm:flex-row gap-4">
           <a href="#download" class="bg-white/20 hover:bg-white/30 backdrop-blur-sm border border-white/40 rounded-xl px-6 py-3 text-base font-medium flex items-center gap-2">
+            <!-- Apple icon -->
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 384 512"><path d="M318.7 268c-.2-38.3 16.7-67.4 52.7-89 0 0-26.7-38-73-38-41.7 0-61.7 28.2-92 28.2-30.3 0-51.3-28.2-92-28.2-56.3 0-108.3 45.8-108.3 131.8 0 24.8 4.5 53 20.3 80.7C62.7 420 88.3 451.7 119 451.7c28.7 0 39.6-18.5 82-18.5 42.4 0 53.3 18.5 82 18.5 30.7 0 55.4-31.7 72.6-60.3 11.4-18.7 15.8-28.6 24.7-50.2-64.4-24.6-61.8-98.7-61.6-120.2z"/></svg>
             Coming Soon on App Store</a>
           <a href="#download" class="bg-white text-gray-900 hover:bg-gray-200 rounded-xl px-6 py-3 text-base font-medium flex items-center gap-2">
+            <!-- Play icon -->
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="30 336.7 120.9 129.2"><path d="M153.7 386.3L32.4 336.7v129.2l121.3-50.1-97.6-25.3 97.6-25.4z"/></svg>
-            Coming Soon on Google Play</a>
+            Get it on Google Play</a>
         </div>
       </div>
       <img src="your-screenshot.png" alt="App preview" class="w-full md:w-1/2 rounded-3xl shadow-xl" loading="lazy" />
@@ -36,21 +40,21 @@
     <div class="max-w-7xl mx-auto px-6">
       <h2 class="text-3xl font-bold text-center mb-12">Why SmartCommute?</h2>
       <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
-        <div class="bg-white rounded-2xl shadow p-6">
+        <div class="bg-white rounded-2xl shadow p-6 fade-enter">
           <h3 class="font-semibold text-xl mb-2">Live&nbsp;Heatmaps</h3>
           <p class="text-sm leading-relaxed">Visual congestion levels updated every few minutes—no more guessing game.</p>
         </div>
-        <div class="bg-white rounded-2xl shadow p-6">
+        <div class="bg-white rounded-2xl shadow p-6 fade-enter">
           <h3 class="font-semibold text-xl mb-2">Community&nbsp;Reports</h3>
           <p class="text-sm leading-relaxed">Users share real‑time observations with quick “tap‑to‑vote” cards.</p>
         </div>
-        <div class="bg-white rounded-2xl shadow p-6">
+        <div class="bg-white rounded-2xl shadow p-6 fade-enter">
           <h3 class="font-semibold text-xl mb-2">AI&nbsp;Forecasts</h3>
           <p class="text-sm leading-relaxed">Short‑range predictions trained on historical cameras &amp; traffic data—helping you plan ahead.</p>
         </div>
-        <div class="bg-white rounded-2xl shadow p-6">
-          <h3 class="font-semibold text-xl mb-2">Privacy‑first</h3>
-          <p class="text-sm leading-relaxed">We <strong>do not collect personal location data</strong>. Your on‑device GPS is used only to weight anonymous votes.</p>
+        <div class="bg-white rounded-2xl shadow p-6 fade-enter">
+          <h3 class="font-semibold text-xl mb-2">Lightweight&nbsp;&amp;&nbsp;Secure</h3>
+          <p class="text-sm leading-relaxed">We collect only what’s necessary. Enabling <strong>personalised ads</strong> is optional—but boosts revenue to fund our AI engine.</p>
         </div>
       </div>
     </div>
@@ -59,10 +63,10 @@
   <!-- Support Us -->
   <section class="py-20 bg-indigo-50" id="support">
     <div class="max-w-3xl mx-auto px-6 text-center">
-      <h2 class="text-3xl font-bold mb-4">SmartCommute is Free—But AI Isn’t 😉</h2>
-      <p class="mb-8 text-lg">Running camera analysis in the cloud costs real money. Ads keep the servers humming, but you can help us go further.</p>
+      <h2 class="text-3xl font-bold mb-4">SmartCommute is Free—But Servers Aren’t 😉</h2>
+      <p class="mb-8 text-lg">Personalised ads generate higher returns and cover GPU‑hours for image recognition. If you’re comfortable, keep ad‑tracking switched on—every cent helps.</p>
       <div class="flex flex-col sm:flex-row justify-center gap-6">
-        <a href="https://ko-fi.com/yourlink" class="bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-3 px-8 rounded-xl shadow">Buy&nbsp;Us&nbsp;a&nbsp;Coffee ☕</a>
+        <button id="donateBtn" class="bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-3 px-8 rounded-xl shadow">Donate&nbsp;Now 💜</button>
         <a href="#pricing" class="bg-white hover:bg-gray-100 border border-gray-300 text-gray-900 font-medium py-3 px-8 rounded-xl shadow">See Future&nbsp;Plans</a>
       </div>
     </div>
@@ -78,7 +82,7 @@
         <!-- Free Plan -->
         <div class="bg-white rounded-3xl shadow p-8 flex flex-col">
           <h3 class="text-xl font-semibold mb-2">Free&nbsp;Plan</h3>
-          <p class="text-sm mb-6">Supported by lightweight banner &amp; interstitial ads.</p>
+          <p class="text-sm mb-6">Supported by lightweight banner &amp; interstitial ads. Turning on ad‑tracking amplifies support—it’s fully optional.</p>
           <ul class="space-y-2 flex-1">
             <li>✔ Live heatmaps &amp; AI forecasts</li>
             <li>✔ Community voting</li>
@@ -89,13 +93,18 @@
         <!-- Premium Plan -->
         <div class="bg-indigo-600 text-white rounded-3xl shadow-lg p-8 flex flex-col">
           <h3 class="text-xl font-semibold mb-2">Premium&nbsp;— Coming Soon</h3>
-          <p class="text-sm mb-6">Early concept—pricing TBD. Register interest!</p>
+          <p class="text-sm mb-6">Early concept—pricing TBD. Sign up to be first in line!</p>
           <ul class="space-y-2 flex-1">
             <li>⚡️ Ad‑free experience</li>
-            <li>⚡️ Advanced 4‑hr forecasts</li>
+            <li>⚡️ Advanced 6‑hr forecasts</li>
             <li>⚡️ Customizable alert push‑notifications</li>
           </ul>
-          <button class="mt-8 bg-white/20 hover:bg-white/30 backdrop-blur py-3 rounded-xl font-medium" disabled>Notify&nbsp;Me</button>
+          <!-- Notify form -->
+          <form id="notifyForm" class="mt-6 flex flex-col sm:flex-row gap-3">
+            <input required type="email" name="email" placeholder="Email address" class="flex-1 px-4 py-2 rounded-lg text-gray-900" />
+            <button type="submit" class="bg-white/20 hover:bg-white/30 backdrop-blur py-2 px-6 rounded-lg font-medium">Notify&nbsp;Me</button>
+          </form>
+          <p id="notifyMsg" class="text-xs mt-2 opacity-0 transition-opacity"></p>
         </div>
       </div>
     </div>
@@ -108,15 +117,15 @@
       <div class="space-y-6">
         <details class="bg-white rounded-xl shadow p-5" open>
           <summary class="font-medium cursor-pointer">How accurate are the AI forecasts?</summary>
-          <p class="mt-3 text-sm leading-relaxed">Forecasts improve over time as we collect more data. We avoid publishing a fixed “accuracy %” because checkpoint traffic is inherently unpredictable. Use our insights as guidance—not gospel.</p>
+          <p class="mt-3 text-sm leading-relaxed">Forecasts improve over time as we collect more data. Traffic is unpredictable—use our insights as guidance, not gospel.</p>
         </details>
         <details class="bg-white rounded-xl shadow p-5">
-          <summary class="font-medium cursor-pointer">Do you track my location?</summary>
-          <p class="mt-3 text-sm leading-relaxed">No personal location data is stored. When you vote, we use your device’s GPS transiently to weight votes and then discard it. Nothing is tied back to your identity.</p>
+          <summary class="font-medium cursor-pointer">Why allow personalised ads?</summary>
+          <p class="mt-3 text-sm leading-relaxed">Personalised ads typically generate 30‑50% more revenue, funding GPU time for image recognition and faster feature rollouts. It’s entirely your choice—toggle it off anytime in Settings.</p>
         </details>
         <details class="bg-white rounded-xl shadow p-5">
-          <summary class="font-medium cursor-pointer">How can I support development?</summary>
-          <p class="mt-3 text-sm leading-relaxed">Watch an occasional video ad, share the app with friends, or buy us a coffee via the link above. Your support funds server costs and new features.</p>
+          <summary class="font-medium cursor-pointer">How can I support development further?</summary>
+          <p class="mt-3 text-sm leading-relaxed">Leave us a review, share with friends, keep ads enabled, or send a donation—every bit helps keep SmartCommute running smoothly.</p>
         </details>
       </div>
     </div>
@@ -127,8 +136,50 @@
     <p>© <span id="year"></span> Causeway SmartCommute by Tay&nbsp;Tong&nbsp;Tau. All rights reserved.</p>
   </footer>
 
+  <!-- Scripts -->
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Donate button – redirect to Ko‑fi (placeholder)
+    document.getElementById('donateBtn').addEventListener('click', () => {
+      window.open('https://ko-fi.com/yourlink', '_blank');
+    });
+
+    // Notify‑me simple handler (Mailchimp Formspree placeholder)
+    const notifyForm = document.getElementById('notifyForm');
+    const notifyMsg  = document.getElementById('notifyMsg');
+
+    notifyForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const formData = new FormData(notifyForm);
+      const email = formData.get('email');
+      try {
+        // Replace with your endpoint
+        await fetch('https://formspree.io/f/yourFormID', {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: formData
+        });
+        notifyMsg.textContent = '🎉 Thanks! We’ll keep you posted.';
+        notifyMsg.classList.remove('opacity-0');
+        notifyForm.reset();
+      } catch (err) {
+        notifyMsg.textContent = 'Oops, something went wrong. Please try again later.';
+        notifyMsg.classList.remove('opacity-0');
+      }
+    });
+
+    // Simple fade‑in on scroll
+    const observers = document.querySelectorAll('.fade-enter');
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-enter-active');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    observers.forEach(el => io.observe(el));
   </script>
 </body>
 </html>
