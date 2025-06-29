@@ -137,29 +137,35 @@
       window.open('https://ko-fi.com/smartcommute', '_blank');
     });
 
-    // Notify-me simple handler (e.g., for Mailchimp, Formspree)
+    // Notify-me handler → Formspark
     const notifyForm = document.getElementById('notifyForm');
     const notifyMsg  = document.getElementById('notifyMsg');
 
     notifyForm.addEventListener('submit', async (e) => {
       e.preventDefault();
-      const formData = new FormData(notifyForm);
-      const email = formData.get('email');
+
+      // Convert form fields to a plain object
+      const data = Object.fromEntries(new FormData(notifyForm).entries());
+
       try {
-        // Replace with your form endpoint
-        await fetch('https://submit-form.com/PT6pr66gb', {
+        await fetch('https://submit-form.com/PT6pr66gb', {   // ← your Formspark ID
           method: 'POST',
-          headers: { 'Accept': 'application/json' },
-          body: formData
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept'      : 'application/json'
+          },
+          body: JSON.stringify(data)
         });
+
         notifyMsg.textContent = '🎉 Thanks! I’ll keep you posted.';
-        notifyMsg.classList.remove('opacity-0');
-        notifyForm.reset();
       } catch (err) {
         notifyMsg.textContent = 'Oops, something went wrong. Please try again later.';
-        notifyMsg.classList.remove('opacity-0');
       }
+
+      notifyMsg.classList.remove('opacity-0');
+      notifyForm.reset();
     });
+
 
     // Simple fade‑in on scroll
     const observers = document.querySelectorAll('.fade-enter');
