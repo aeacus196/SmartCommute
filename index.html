@@ -1,183 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Causeway SmartCommute – Beat the Jam with AI</title>
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <style>
-    body { font-family: 'Inter', sans-serif; }
-    .fade-enter { opacity: 0; transform: translateY(40px); }
-    .fade-enter-active { opacity: 1; transform: translateY(0); transition: opacity 0.4s, transform 0.4s; }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Causeway SmartCommute – Beat the Jam with AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .fade-enter { opacity: 0; transform: translateY(40px); }
+    .fade-enter-active { opacity: 1; transform: translateY(0); transition: opacity 0.4s, transform 0.4s; }
+  </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
-  <!-- Header -->
-  <header class="bg-gradient-to-r from-indigo-600 to-sky-500 text-white">
-    <div class="max-w-7xl mx-auto px-6 py-16 flex flex-col md:flex-row items-center justify-between gap-10">
-      <div>
-        <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4">Causeway&nbsp;SmartCommute</h1>
-        <p class="text-lg md:text-xl mb-8 max-w-xl">Crowd‑sourced, AI‑powered traffic insights for Singapore–Malaysia Causeway &amp; Tuas checkpoints.</p>
-        <div class="flex flex-col sm:flex-row gap-4">
-          <a href="#download" class="inline-block">
-            <img src="images/download-on-the-app-store.svg" alt="Download on the App Store" class="h-10 md:h-12" loading="lazy" />
-          </a>
-          <a href="#download" class="inline-block">
-            <img src="images/PreRegisterOnGooglePlay_Badge_Web_color_english.png.png" alt="Get it on Google Play" class="h-10 md:h-12" loading="lazy" />
-          </a>
-        </div>
-      </div>
-      <img src="images/hourly.png" alt="App preview" class="w-full md:w-2/5 rounded-3xl shadow-xl" loading="lazy" />
-    </div>
-  </header>
+    <header class="bg-gradient-to-r from-indigo-600 to-sky-500 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16 flex flex-col md:flex-row items-center justify-between gap-10">
+            <div class="text-center md:text-left">
+                <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-4">Causeway&nbsp;SmartCommute</h1>
+        <p class="text-lg md:text-xl mb-8 max-w-xl">Crowd‑sourced, AI‑powered traffic insights for Singapore–Malaysia Causeway &amp; Tuas checkpoints.</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+          <a href="#download" class="inline-block">
+            <img src="images/download-on-the-app-store.svg" alt="Download on the App Store" class="h-10 md:h-12" loading="lazy" />
+          </a>
+          <a href="#download" class="inline-block">
+            <img src="images/PreRegisterOnGooglePlay_Badge_Web_color_english.png.png" alt="Get it on Google Play" class="h-10 md:h-12" loading="lazy" />
+          </a>
+        </div>
+      </div>
+          <img src="images/hourly.png" alt="App preview" class="w-full md:w-2/5 rounded-3xl shadow-xl mt-8 md:mt-0" loading="lazy" />
+    </div>
+  </header>
 
-  <section class="py-20" id="features">
-    <div class="max-w-7xl mx-auto px-6">
-      <h2 class="text-3xl font-bold text-center mb-12">Why SmartCommute?</h2>
-      <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
-        <div class="bg-white rounded-2xl shadow p-6 fade-enter">
-          <h3 class="font-semibold text-xl mb-2">Live&nbsp;Heatmaps</h3>
-          <p class="text-sm leading-relaxed">Visual congestion levels updated every few minutes—no more guessing game.</p>
-        </div>
-        <div class="bg-white rounded-2xl shadow p-6 fade-enter">
-          <h3 class="font-semibold text-xl mb-2">Community&nbsp;Reports</h3>
-          <p class="text-sm leading-relaxed">Users share real‑time observations with quick “tap‑to‑vote” cards.</p>
-        </div>
-        <div class="bg-white rounded-2xl shadow p-6 fade-enter">
-          <h3 class="font-semibold text-xl mb-2">AI&nbsp;Forecasts</h3>
-          <p class="text-sm leading-relaxed">Short‑range predictions trained on historical cameras &amp; traffic data—helping you plan ahead.</p>
-        </div>
-        <div class="bg-white rounded-2xl shadow p-6 fade-enter">
-          <h3 class="font-semibold text-xl mb-2">Lightweight&nbsp;&amp;&nbsp;Secure</h3>
-          <p class="text-sm leading-relaxed">I only collect what’s necessary. Enabling <strong>personalised ads</strong> is optional—but it helps fund the AI engine and keep the app free.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    <section class="py-16 sm:py-20" id="features">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <h2 class="text-3xl font-bold text-center mb-12">Why SmartCommute?</h2>
+            <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div class="bg-white rounded-2xl shadow p-6 fade-enter">
+          <h3 class="font-semibold text-xl mb-2">Live&nbsp;Heatmaps</h3>
+          <p class="text-sm leading-relaxed">Visual congestion levels updated every few minutes—no more guessing game.</p>
+        </div>
+        <div class="bg-white rounded-2xl shadow p-6 fade-enter">
+          <h3 class="font-semibold text-xl mb-2">Community&nbsp;Reports</h3>
+          <p class="text-sm leading-relaxed">Users share real‑time observations with quick “tap‑to‑vote” cards.</p>
+        </div>
+        <div class="bg-white rounded-2xl shadow p-6 fade-enter">
+          <h3 class="font-semibold text-xl mb-2">AI&nbsp;Forecasts</h3>
+          <p class="text-sm leading-relaxed">Short‑range predictions trained on historical cameras &amp; traffic data—helping you plan ahead.</p>
+        </div>
+        <div class="bg-white rounded-2xl shadow p-6 fade-enter">
+          <h3 class="font-semibold text-xl mb-2">Lightweight&nbsp;&amp;&nbsp;Secure</h3>
+          <p class="text-sm leading-relaxed">I only collect what’s necessary. Enabling <strong>personalised ads</strong> is optional—but it helps fund the AI engine and keep the app free.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <section class="py-20 bg-indigo-50" id="support">
-    <div class="max-w-3xl mx-auto px-6 text-center">
-      <h2 class="text-3xl font-bold mb-4">I Built This For You—Consider Supporting Its Future</h2>
-      <p class="mb-8 text-lg">As a solo developer, every bit of support goes a long way. Keeping ads enabled or making a small donation helps cover server costs and allows me to keep building new features for everyone.</p>
-      <div class="flex flex-col sm:flex-row justify-center gap-6">
-        <button id="donateBtn" class="bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-3 px-8 rounded-xl shadow">Donate&nbsp;Now 💜</button>
-        <a href="#pricing" class="bg-white hover:bg-gray-100 border border-gray-300 text-gray-900 font-medium py-3 px-8 rounded-xl shadow">See Future&nbsp;Plans</a>
-      </div>
-    </div>
-  </section>
+  <section class="py-16 sm:py-20 bg-indigo-50" id="support">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+      <h2 class="text-3xl font-bold mb-4">I Built This For You—Consider Supporting Its Future</h2>
+      <p class="mb-8 text-lg">As a solo developer, every bit of support goes a long way. Keeping ads enabled or making a small donation helps cover server costs and allows me to keep building new features for everyone.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-6">
+        <button id="donateBtn" class="bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-3 px-8 rounded-xl shadow">Donate&nbsp;Now 💜</button>
+        <a href="#pricing" class="bg-white hover:bg-gray-100 border border-gray-300 text-gray-900 font-medium py-3 px-8 rounded-xl shadow">See Future&nbsp;Plans</a>
+      </div>
+    </div>
+  </section>
 
-  <section class="py-20" id="pricing">
-    <div class="max-w-5xl mx-auto px-6">
-      <h2 class="text-3xl font-bold text-center mb-4">Current &amp; Upcoming Plans</h2>
-      <p class="text-center mb-12">Today, everyone enjoys the full experience <strong>free with ads</strong>. I'm exploring an optional <em>Premium</em> tier—ad‑free with extra analytics—based on your feedback.</p>
+  <section class="py-16 sm:py-20" id="pricing">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <h2 class="text-3xl font-bold text-center mb-4">Current &amp; Upcoming Plans</h2>
+      <p class="text-center mb-12">Today, everyone enjoys the full experience <strong>free with ads</strong>. I'm exploring an optional <em>Premium</em> tier—ad‑free with extra analytics—based on your feedback.</p>
+            <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-white rounded-3xl shadow p-8 flex flex-col">
+          <h3 class="text-xl font-semibold mb-2">Free&nbsp;Plan</h3>
+          <p class="text-sm mb-6">Supported by lightweight banner &amp; interstitial ads. Turning on ad‑tracking amplifies support—it’s fully optional.</p>
+          <ul class="space-y-2 flex-1">
+            <li>✔ Live heatmaps &amp; AI forecasts</li>
+            <li>✔ Community voting</li>
+            <li>✔ Unlimited history browse</li>
+          </ul>
+          <div class="mt-8 text-2xl font-bold">$0<span class="text-base font-normal">/forever</span></div>
+        </div>
+        <div class="bg-indigo-600 text-white rounded-3xl shadow-lg p-8 flex flex-col">
+          <h3 class="text-xl font-semibold mb-2">Premium&nbsp;— Coming Soon</h3>
+          <p class="text-sm mb-6">Early concept—pricing TBD. Sign up to be first in line!</p>
+          <ul class="space-y-2 flex-1">
+            <li>⚡️ Ad‑free experience</li>
+            <li>⚡️ Advanced 6‑hr forecasts</li>
+            <li>⚡️ Customizable alert push‑notifications</li>
+          </ul>
+                    <form id="notifyForm" class="mt-6 flex flex-col sm:flex-row gap-3">
+            <input required type="email" name="email" placeholder="Email address" class="flex-1 px-4 py-2 rounded-lg text-gray-900" />
+            <button type="submit" class="bg-white/20 hover:bg-white/30 backdrop-blur py-2 px-6 rounded-lg font-medium">Notify&nbsp;Me</button>
+          </form>
+          <p id="notifyMsg" class="text-xs mt-2 opacity-0 transition-opacity"></p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <div class="grid md:grid-cols-2 gap-10">
-        <div class="bg-white rounded-3xl shadow p-8 flex flex-col">
-          <h3 class="text-xl font-semibold mb-2">Free&nbsp;Plan</h3>
-          <p class="text-sm mb-6">Supported by lightweight banner &amp; interstitial ads. Turning on ad‑tracking amplifies support—it’s fully optional.</p>
-          <ul class="space-y-2 flex-1">
-            <li>✔ Live heatmaps &amp; AI forecasts</li>
-            <li>✔ Community voting</li>
-            <li>✔ Unlimited history browse</li>
-          </ul>
-          <div class="mt-8 text-2xl font-bold">$0<span class="text-base font-normal">/forever</span></div>
-        </div>
-        <div class="bg-indigo-600 text-white rounded-3xl shadow-lg p-8 flex flex-col">
-          <h3 class="text-xl font-semibold mb-2">Premium&nbsp;— Coming Soon</h3>
-          <p class="text-sm mb-6">Early concept—pricing TBD. Sign up to be first in line!</p>
-          <ul class="space-y-2 flex-1">
-            <li>⚡️ Ad‑free experience</li>
-            <li>⚡️ Advanced 6‑hr forecasts</li>
-            <li>⚡️ Customizable alert push‑notifications</li>
-          </ul>
-          <form id="notifyForm" class="mt-6 flex flex-col sm:flex-row gap-3">
-            <input required type="email" name="email" placeholder="Email address" class="flex-1 px-4 py-2 rounded-lg text-gray-900" />
-            <button type="submit" class="bg-white/20 hover:bg-white/30 backdrop-blur py-2 px-6 rounded-lg font-medium">Notify&nbsp;Me</button>
-          </form>
-          <p id="notifyMsg" class="text-xs mt-2 opacity-0 transition-opacity"></p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <section class="py-16 bg-gray-100" id="faq">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <h2 class="text-3xl font-bold text-center mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        <details class="bg-white rounded-xl shadow p-5" open>
+          <summary class="font-medium cursor-pointer">How accurate are the AI forecasts?</summary>
+          <p class="mt-3 text-sm leading-relaxed">Forecasts improve over time as more data is collected. Traffic is unpredictable—so please use these insights as guidance, not gospel.</p>
+        </details>
+        <details class="bg-white rounded-xl shadow p-5">
+          <summary class="font-medium cursor-pointer">Why allow personalised ads?</summary>
+          <p class="mt-3 text-sm leading-relaxed">Personalised ads typically generate more revenue, which helps fund the GPU time for the AI and faster feature rollouts. It’s entirely your choice—you can toggle it off anytime in Settings.</p>
+        </details>
+        <details class="bg-white rounded-xl shadow p-5">
+          <summary class="font-medium cursor-pointer">How can I support development?</summary>
+          <p class="mt-3 text-sm leading-relaxed">Leaving a review, sharing the app with friends, keeping ads enabled, or sending a small donation—every bit helps me keep SmartCommute running and improving.</p>
+        </details>
+      </div>
+    </div>
+  </section>
 
-  <section class="py-16 bg-gray-100" id="faq">
-    <div class="max-w-4xl mx-auto px-6">
-      <h2 class="text-3xl font-bold text-center mb-10">Frequently Asked Questions</h2>
-      <div class="space-y-6">
-        <details class="bg-white rounded-xl shadow p-5" open>
-          <summary class="font-medium cursor-pointer">How accurate are the AI forecasts?</summary>
-          <p class="mt-3 text-sm leading-relaxed">Forecasts improve over time as more data is collected. Traffic is unpredictable—so please use these insights as guidance, not gospel.</p>
-        </details>
-        <details class="bg-white rounded-xl shadow p-5">
-          <summary class="font-medium cursor-pointer">Why allow personalised ads?</summary>
-          <p class="mt-3 text-sm leading-relaxed">Personalised ads typically generate more revenue, which helps fund the GPU time for the AI and faster feature rollouts. It’s entirely your choice—you can toggle it off anytime in Settings.</p>
-        </details>
-        <details class="bg-white rounded-xl shadow p-5">
-          <summary class="font-medium cursor-pointer">How can I support development?</summary>
-          <p class="mt-3 text-sm leading-relaxed">Leaving a review, sharing the app with friends, keeping ads enabled, or sending a small donation—every bit helps me keep SmartCommute running and improving.</p>
-        </details>
-      </div>
-    </div>
-  </section>
+  <footer class="py-10 text-center text-sm text-gray-500">
+    <p>© <span id="year"></span> Causeway SmartCommute. A passion project by a solo developer.</p>
+    <p class="mt-2">
+      <a href="privacy.md" target="_blank" class="underline hover:text-indigo-600">Privacy Policy</a>
+    </p>
+  </footer>
 
-  <footer class="py-10 text-center text-sm text-gray-500">
-    <p>© <span id="year"></span> Causeway SmartCommute. A passion project by a solo developer.</p>
-    <p class="mt-2">
-      <a href="privacy.md" target="_blank" class="underline hover:text-indigo-600">Privacy Policy</a>
-    </p>
-  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+    // Donate button – redirect to your donation page
+    document.getElementById('donateBtn').addEventListener('click', () => {
+      window.open('https://ko-fi.com/smartcommute', '_blank');
+    });
 
-    // Donate button – redirect to your donation page
-    document.getElementById('donateBtn').addEventListener('click', () => {
-      window.open('https://ko-fi.com/smartcommute', '_blank');
-    });
+    // Notify-me handler → Formspark
+    const notifyForm = document.getElementById('notifyForm');
+    const notifyMsg  = document.getElementById('notifyMsg');
 
-    // Notify-me handler → Formspark
-    const notifyForm = document.getElementById('notifyForm');
-    const notifyMsg  = document.getElementById('notifyMsg');
+    notifyForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
 
-    notifyForm.addEventListener('submit', async (e) => {
-      e.preventDefault();
+      // Convert form fields to a plain object
+      const data = Object.fromEntries(new FormData(notifyForm).entries());
 
-      // Convert form fields to a plain object
-      const data = Object.fromEntries(new FormData(notifyForm).entries());
+      try {
+        await fetch('https://submit-form.com/form_v1_LGobQaIMGyRYXLu5Kaa8bRm', {   // ← your Formspark ID
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept'      : 'application/json'
+          },
+          body: JSON.stringify(data)
+        });
 
-      try {
-        await fetch('https://submit-form.com/form_v1_LGobQaIMGyRYXLu5Kaa8bRm', {   // ← your Formspark ID
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Accept'      : 'application/json'
-          },
-          body: JSON.stringify(data)
-        });
+        notifyMsg.textContent = '🎉 Thanks! I’ll keep you posted.';
+      } catch (err) {
+        notifyMsg.textContent = 'Oops, something went wrong. Please try again later.';
+      }
 
-        notifyMsg.textContent = '🎉 Thanks! I’ll keep you posted.';
-      } catch (err) {
-        notifyMsg.textContent = 'Oops, something went wrong. Please try again later.';
-      }
-
-      notifyMsg.classList.remove('opacity-0');
-      notifyForm.reset();
-    });
+      notifyMsg.classList.remove('opacity-0');
+      notifyForm.reset();
+    });
 
 
-    // Simple fade‑in on scroll
-    const observers = document.querySelectorAll('.fade-enter');
-    const io = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('fade-enter-active');
-          io.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-    observers.forEach(el => io.observe(el));
-  </script>
+    // Simple fade‑in on scroll
+    const observers = document.querySelectorAll('.fade-enter');
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-enter-active');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    observers.forEach(el => io.observe(el));
+  </script>
 </body>
 </html>
